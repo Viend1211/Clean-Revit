@@ -1,8 +1,71 @@
-# Revit Cleaner
+# Clean Revit
 
-Русская утилита для очистки следов Autodesk Revit выбранной версии перед повторной установкой.
+PowerShell GUI-утилита для очистки пользовательских данных Autodesk Revit.
 
-Подходит для случаев, когда установщик Revit пишет, что программа уже установлена, либо установка падает с ошибкой вроде `Ошибка 4000`.
+Скрипт помогает быстро удалить временные файлы, кэш, журналы, резервные данные и другие накопившиеся файлы Revit через удобный графический интерфейс.
+
+## 🚀 Быстрый запуск
+
+Запустить напрямую из GitHub:
+
+```powershell
+irm https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1 | iex
+```
+
+или
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1 | Invoke-Expression
+```
+
+## Скачать и запустить
+
+```powershell
+$Script = "$env:TEMP\Clean-Revit-GUI.ps1"
+
+Invoke-WebRequest `
+    -Uri "https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1" `
+    -OutFile $Script
+
+powershell.exe -ExecutionPolicy Bypass -File $Script
+```
+
+## Однострочный запуск
+
+```powershell
+$F="$env:TEMP\Clean-Revit-GUI.ps1";iwr "https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1" -OutFile $F;powershell -ExecutionPolicy Bypass -File $F
+```
+
+## Возможности
+
+* Очистка временных файлов Revit
+* Очистка локального кэша
+* Удаление журналов (Journals)
+* Очистка пользовательских данных
+* Удаление ненужных файлов для освобождения места
+* Графический интерфейс (GUI)
+
+## Требования
+
+* Windows 10 / 11
+* PowerShell 5.1 или выше
+* Autodesk Revit (любая поддерживаемая версия)
+
+## Запуск локальной копии
+
+После скачивания репозитория:
+
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File .\Clean-Revit-GUI.ps1
+```
+
+## Примечание
+
+Перед очисткой рекомендуется закрыть все запущенные экземпляры Autodesk Revit.
+
+## Автор
+
+Viend1211
 
 ## Что умеет
 
