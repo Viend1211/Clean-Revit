@@ -6,18 +6,6 @@ PowerShell GUI-утилита для очистки пользовательск
 
 ## 🚀 Быстрый запуск
 
-Запустить напрямую из GitHub:
-
-```powershell
-irm https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1 | iex
-```
-
-или
-
-```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/Viend1211/Clean-Revit/main/Clean-Revit-GUI.ps1 | Invoke-Expression
-```
-
 ## Скачать и запустить
 
 ```powershell
